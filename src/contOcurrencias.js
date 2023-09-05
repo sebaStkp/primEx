@@ -5,23 +5,45 @@ export function frase(cadena){
 export function contPalabras(cadena){
     var cad = cadena + "";
     var contador = 0;
+    var arrayPalabras = [];
+    var posArray = 0;
+    var subString = "";
     for(var i = 0;i<cad.length;i++)
     {
+        subString += cad[i];
         if(cad[i] == " "){
             contador += 1;
+            arrayPalabras[posArray] = subString; 
+            posArray++;
+            subString = "";
         }
         if(cad[i] == "-"){
             contador += 1;
+            arrayPalabras[posArray] = subString; 
+            posArray++;
+            subString = "";
         }
         if(cad[i] == ","){
             contador += 1;
+            arrayPalabras[posArray] = subString; 
+            posArray++;
+            subString = "";
         }
         if(cad[i] == ";"){
             contador += 1;
+            arrayPalabras[posArray] = subString; 
+            posArray++;
+            subString = "";
         }
         if(cad[i] == "."){
             contador += 1;
+            arrayPalabras[posArray] = subString; 
+            posArray++;
+            subString = "";
         }
     }
-    return contador + 1;
+    contador++;
+    return [contador, arrayPalabras];
 }
+
+
