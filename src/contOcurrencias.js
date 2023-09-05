@@ -16,6 +16,12 @@ export function contPalabras(cadena){
         if(cad[i] == ","){
             contador += 1;
         }
+        if(cad[i] == ";"){
+            contador += 1;
+        }
+        if(cad[i] == "."){
+            contador += 1;
+        }
     }
     return contador + 1;
 }

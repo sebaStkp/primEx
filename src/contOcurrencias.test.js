@@ -13,5 +13,8 @@ describe("Cuenta la cantidad de ocurrencias de una frase", () => {
     it("separa la frase ingresada tomando como criterio el guion '-' y coma ',' ", () => {
         expect(contPalabras("Esto-es,una frase de$prueba")).toEqual(5);
     });
+    it("separa la frase ingresada tomando como criterio el punto y coma ';' y punto '.' ", () => {
+        expect(contPalabras("Esto$es%una.frase;es&prueba")).toEqual(3);
+    });
   });
   
